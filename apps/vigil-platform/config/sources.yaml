@@ -1,0 +1,188 @@
+# Vigil Platform - Source Configuration
+#
+# French National Politics Sources
+#
+# Focus: Assemblée Nationale, Sénat, Political Parties, Government
+
+sources:
+  # ========================================
+  # PARLIAMENTARY (Assemblée & Sénat)
+  # ========================================
+  
+  - source_id: "assemblee_nationale_001"
+    name: "Assemblée Nationale"
+    url: "https://www.assemblee-nationale.fr"
+    category: "parliamentary"
+    language: "fr"
+    rss_url: "https://www.assemblee-nationale.fr/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 10  # Government site, be respectful
+    enabled: true
+    description: "French National Assembly official site"
+  
+  - source_id: "senat_001"
+    name: "Sénat"
+    url: "https://www.senat.fr"
+    category: "parliamentary"
+    language: "fr"
+    rss_url: "https://www.senat.fr/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 10
+    enabled: true
+    description: "French Senate official site"
+  
+  - source_id: "nosdeputes_001"
+    name: "NosDéputés.fr"
+    url: "https://www.nosdeputes.fr"
+    category: "parliamentary"
+    language: "fr"
+    strategies: ["static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Deputy activity tracking (NGO)"
+  
+  # ========================================
+  # PARTIES (Political Parties)
+  # ========================================
+  
+  - source_id: "renaissance_001"
+    name: "Renaissance (Macron)"
+    url: "https://www.renaissance-en-marche.fr"
+    category: "parties"
+    language: "fr"
+    rss_url: "https://www.renaissance-en-marche.fr/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Renaissance party (formerly LREM)"
+  
+  - source_id: "rn_001"
+    name: "Rassemblement National"
+    url: "https://rassemblementnational.fr"
+    category: "parties"
+    language: "fr"
+    strategies: ["static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "National Rally (RN) party"
+  
+  - source_id: "lfi_001"
+    name: "La France Insoumise"
+    url: "https://lafranceinsoumise.fr"
+    category: "parties"
+    language: "fr"
+    rss_url: "https://lafranceinsoumise.fr/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "France Unbowed (LFI) party"
+  
+  - source_id: "lr_001"
+    name: "Les Républicains"
+    url: "https://www.republicains.fr"
+    category: "parties"
+    language: "fr"
+    strategies: ["static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "The Republicans (LR) party"
+  
+  - source_id: "ps_001"
+    name: "Parti Socialiste"
+    url: "https://www.parti-socialiste.fr"
+    category: "parties"
+    language: "fr"
+    rss_url: "https://www.parti-socialiste.fr/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Socialist Party (PS)"
+  
+  # ========================================
+  # GOVERNMENT (Ministries)
+  # ========================================
+  
+  - source_id: "elysee_001"
+    name: "Élysée (Présidence)"
+    url: "https://www.elysee.fr"
+    category: "government"
+    language: "fr"
+    rss_url: "https://www.elysee.fr/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 10
+    enabled: true
+    description: "French Presidency official site"
+  
+  - source_id: "gouvernement_001"
+    name: "Gouvernement.fr"
+    url: "https://www.gouvernement.fr"
+    category: "government"
+    language: "fr"
+    rss_url: "https://www.gouvernement.fr/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 10
+    enabled: true
+    description: "French Government portal"
+  
+  # ========================================
+  # MEDIAS (Political News)
+  # ========================================
+  
+  - source_id: "lemonde_politique_001"
+    name: "Le Monde - Politique"
+    url: "https://www.lemonde.fr/politique"
+    category: "medias"
+    language: "fr"
+    rss_url: "https://www.lemonde.fr/politique/rss_full.xml"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Le Monde political coverage"
+  
+  - source_id: "liberation_politique_001"
+    name: "Libération - Politique"
+    url: "https://www.liberation.fr/politique"
+    category: "medias"
+    language: "fr"
+    rss_url: "https://www.liberation.fr/politique/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Libération political coverage"
+  
+  - source_id: "figaro_politique_001"
+    name: "Le Figaro - Politique"
+    url: "https://www.lefigaro.fr/politique"
+    category: "medias"
+    language: "fr"
+    rss_url: "https://www.lefigaro.fr/rss/politique.xml"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Le Figaro political coverage"
+  
+  # ========================================
+  # THINK TANKS & Analysis
+  # ========================================
+  
+  - source_id: "fondapol_001"
+    name: "Fondation pour l'innovation politique"
+    url: "https://www.fondapol.org"
+    category: "think_tanks"
+    language: "fr"
+    rss_url: "https://www.fondapol.org/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Center-right think tank"
+  
+  - source_id: "institutmontaigne_001"
+    name: "Institut Montaigne"
+    url: "https://www.institutmontaigne.org"
+    category: "think_tanks"
+    language: "fr"
+    rss_url: "https://www.institutmontaigne.org/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Liberal think tank"

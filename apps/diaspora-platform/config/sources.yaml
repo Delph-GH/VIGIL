@@ -1,0 +1,141 @@
+# Diaspora Platform - Source Configuration
+#
+# French expatriate sources in Germany (Bavaria/Baden-Württemberg focus)
+#
+# This file replaces the hardcoded connectors.py (897 LOC)
+
+sources:
+  # ========================================
+  # CONSULAIRE (Consular/Official)
+  # ========================================
+  
+  - source_id: "consulat_munich_001"
+    name: "Consulat de France à Munich"
+    url: "https://munich.consulfrance.org"
+    category: "consulaire"
+    language: "fr"
+    rss_url: "https://munich.consulfrance.org/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 10  # Government site, be respectful
+    enabled: true
+    description: "Official consular news and services for Bavaria"
+  
+  - source_id: "consulat_stuttgart_001"
+    name: "Consulat de France à Stuttgart"
+    url: "https://stuttgart.consulfrance.org"
+    category: "consulaire"
+    language: "fr"
+    rss_url: "https://stuttgart.consulfrance.org/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 10
+    enabled: true
+    description: "Official consular news for Baden-Württemberg"
+  
+  # ========================================
+  # COMMUNAUTÉ (Community)
+  # ========================================
+  
+  - source_id: "ufem_001"
+    name: "Union des Français de l'Étranger - Munich"
+    url: "https://ufemunich.org"
+    category: "communaute"
+    language: "fr"
+    strategies: ["static_http", "headless"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "French expat association in Munich"
+  
+  - source_id: "accueil_munich_001"
+    name: "Accueil des Français de Munich"
+    url: "https://accueil-munich.org"
+    category: "communaute"
+    language: "fr"
+    rss_url: "https://accueil-munich.org/feed"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Welcoming association for French families"
+  
+  # ========================================
+  # MEDIAS (French/German Media)
+  # ========================================
+  
+  - source_id: "lepetitjournal_munich_001"
+    name: "Le Petit Journal Munich"
+    url: "https://lepetitjournal.com/munich"
+    category: "medias"
+    language: "fr"
+    rss_url: "https://lepetitjournal.com/munich/feed"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "French expat news for Munich"
+  
+  - source_id: "connexion_france_001"
+    name: "Connexion France"
+    url: "https://connexionfrance.com"
+    category: "medias"
+    language: "fr"
+    rss_url: "https://connexionfrance.com/feed"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "English-language French news"
+  
+  # ========================================
+  # POLITIQUE (Cross-border Politics)
+  # ========================================
+  
+  - source_id: "france_allemagne_001"
+    name: "France-Allemagne.fr"
+    url: "https://france-allemagne.fr"
+    category: "politique"
+    language: "fr"
+    strategies: ["static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "Franco-German relations news"
+  
+  # ========================================
+  # ECONOMIE (Business/Employment)
+  # ========================================
+  
+  - source_id: "ccfa_001"
+    name: "Chambre de Commerce Franco-Allemande"
+    url: "https://ccfa.de"
+    category: "economie"
+    language: "fr"
+    rss_url: "https://ccfa.de/rss"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 10
+    enabled: true
+    description: "Franco-German chamber of commerce"
+  
+  # ========================================
+  # EDUCATION (Schools/Universities)
+  # ========================================
+  
+  - source_id: "lycee_jean_renoir_001"
+    name: "Lycée Français Jean Renoir Munich"
+    url: "https://lfm.de"
+    category: "education"
+    language: "fr"
+    strategies: ["static_http"]
+    rate_limit_delay: 10
+    enabled: true
+    description: "French international school Munich"
+  
+  # ========================================
+  # CULTURE (Cultural Events)
+  # ========================================
+  
+  - source_id: "institut_francais_001"
+    name: "Institut Français de Munich"
+    url: "https://institutfrancais.de/munich"
+    category: "culture"
+    language: "fr"
+    rss_url: "https://institutfrancais.de/munich/feed"
+    strategies: ["rss", "static_http"]
+    rate_limit_delay: 5
+    enabled: true
+    description: "French cultural institute"
